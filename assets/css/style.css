@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --clr-accent: hsl(75, 94%, 57%);
+    --clr-gray-900: hsl(0, 0%, 8%);
+    --clr-gray-800: hsl(0, 0%, 12%);
+    --clr-gray-700: hsl(0, 0%, 20%);
+    --clr-neutral: hsl(0, 0%, 100%);
+
+    --ff-base: 'Inter', sans-serif;
+
+    --fs-400: 14px;
+    --fs-800: 24px;
+
+    --fw-regular: 400;
+    --fw-bold: 800;
+
+    --spacing-50: 4px;
+    --spacing-100: 8px;
+    --spacing-150: 12px;
+    --spacing-200: 16px;
+    --spacing-300: 24px;
+    --spacing-400: 40px;
+}
+
+body {
+    font-family: var(--ff-base), sans-serif;
+    font-size: var(--fs-400);
+    font-weight: var(--fw-regular);
+    background-color: var(--clr-gray-900);
+    color: var(--clr-neutral);
+    line-height: 1.5;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.profile-container {
+    background-color: var(--clr-gray-800);
+    border-radius: var(--spacing-200);
+    padding: var(--spacing-300);
+    width: 90%;
+    max-width: 328px;
+    min-width: 280px;
+    margin: 0 auto;
+    gap: var(--spacing-300);
+    transition: max-width .5s ease;
+}
+
+.profile__avatar {
+    width: 88px;
+    height: 88px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile__name {
+    font-size: var(--fs-800);
+    font-weight: var(--fw-bold);
+    letter-spacing: 0.2px;
+}
+
+.profile__location {
+    font-size: var(--fs-400);
+    font-weight: var(--fw-bold);
+    color: var(--clr-accent);
+    margin-top: var(--spacing-100);
+}
+
+ul.social-links {
+    list-style: none;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0;
+    gap: var(--spacing-200);
+}
+
+ul.social-links li {
+    width: 100%;
+}
+
+ul.social-links li a {
+    display: inline-block;
+    width: 100%;
+    font-weight: var(--fw-bold);
+    padding-block: var(--spacing-150);
+    background-color: var(--clr-gray-700);
+    border-radius: var(--spacing-100);
+}
+
+ul.social-links li a:hover,
+ul.social-links li a:focus {
+    color: var(--clr-gray-700);
+    background-color: var(--clr-accent);
+    transition: background-color .3s ease;
+}
+
+@media screen and (min-width: 500px){
+    .profile-container {
+        max-width: 456px;
+        padding: var(--spacing-400);
+    }
+}
+
+@media screen and (min-width: 900px){
+    .profile-container {
+        max-width: 384px;
+        padding: var(--spacing-400);
+    }
+}
+
+
+
+
+
+
+
+
+
